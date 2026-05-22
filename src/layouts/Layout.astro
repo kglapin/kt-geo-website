@@ -6,7 +6,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "Multiagencja Ubezpieczeniowa Zimmermann - Kalisz i Krotoszyn. 24 lata doświadczenia, partner Unilink S.A. Porównujemy oferty ponad 40 towarzystw. Ubezpieczenia komunikacyjne, majątkowe, życiowe, rolne i kredyty." } = Astro.props;
+const { title, description = "KT-GEO Sp. z o.o. - Profesjonalne usługi geodezyjne w Oleśnicy i okolicach. Tyczenie budynków, mapy do celów projektowych, inwentaryzacje powykonawcze, podziały nieruchomości. mgr inż. Kamil Nowakowski. Tel: 791 122 618." } = Astro.props;
 ---
 
 <!doctype html>
@@ -14,7 +14,9 @@ const { title, description = "Multiagencja Ubezpieczeniowa Zimmermann - Kalisz i
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/jpg" href="/logo.jpg" />
+    <link rel="icon" type="image/svg+xml" href="/kt-geo-logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -22,9 +24,65 @@ const { title, description = "Multiagencja Ubezpieczeniowa Zimmermann - Kalisz i
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/logo.jpg" />
   </head>
-  <body class="flex flex-col min-h-screen bg-slate-50 text-slate-900 selection:bg-brand-red selection:text-white">
+  <body class="flex flex-col min-h-screen bg-white text-[#111] selection:bg-brand-red selection:text-white">
     <slot />
+
+    <script>
+      import gsap from 'gsap';
+      import { ScrollTrigger } from 'gsap/ScrollTrigger';
+      gsap.registerPlugin(ScrollTrigger);
+
+      const header = document.querySelector('header');
+      if (header) {
+        ScrollTrigger.create({
+          start: 'top -80',
+          end: 99999,
+          toggleClass: { className: 'header-scrolled', targets: header }
+        });
+      }
+
+      const heroBgImg = document.getElementById('hero-bg-img');
+      if (heroBgImg) {
+        gsap.to(heroBgImg, {
+          scale: 1.15,
+          duration: 20,
+          ease: 'sine.inOut',
+          yoyo: true,
+          repeat: -1
+        });
+      }
+
+      const heroH1 = document.querySelector('[data-hero-h1]');
+      const heroP = document.querySelector('[data-hero-p]');
+      const heroCta = document.querySelector('[data-hero-cta]');
+
+      if (heroH1) {
+        const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+        tl.from(heroH1, { y: 50, opacity: 0, duration: 1 })
+          .from(heroP, { y: 30, opacity: 0, duration: 0.8 }, '-=0.5')
+          .from(heroCta, { y: 20, opacity: 0, duration: 0.6 }, '-=0.3');
+      }
+
+      document.querySelectorAll('[data-animate]').forEach(function(el) {
+        gsap.from(el, {
+          y: 40, opacity: 0, duration: 0.8, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 85%' }
+        });
+      });
+
+      document.querySelectorAll('[data-counter]').forEach(function(el) {
+        var target = parseFloat(el.getAttribute('data-counter') || '0');
+        var suffix = el.getAttribute('data-suffix') || '';
+        var obj = { val: 0 };
+        gsap.to(obj, {
+          val: target, duration: 2, ease: 'power2.out',
+          scrollTrigger: { trigger: el, start: 'top 85%' },
+          onUpdate: function() {
+            el.textContent = Math.round(obj.val) + suffix;
+          }
+        });
+      });
+    </script>
   </body>
 </html>
