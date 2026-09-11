@@ -1,0 +1,41 @@
+---
+import ServicePage from '../../components/ServicePage.astro';
+
+const forWhom = [
+  'masz gotowy projekt i przygotowujesz się do rozpoczęcia robót w terenie',
+  'wykonawca potrzebuje jednoznacznie wyznaczonego położenia projektowanego obiektu',
+  'chcesz ograniczyć ryzyko błędnego usytuowania budynku względem projektu'
+];
+
+const youGet = [
+  'wytyczenie kluczowych punktów obiektu zgodnie z dokumentacją projektową',
+  'ustalenia potrzebne wykonawcy przed rozpoczęciem odpowiednich robót',
+  'jasną informację, jakie dokumenty przygotować przed przyjazdem geodety'
+];
+
+const steps = [
+  { title: 'Przekazujesz projekt', description: 'Ustalamy lokalizację inwestycji i zakres elementów, które mają zostać wytyczone.' },
+  { title: 'Wykonujemy tyczenie', description: 'Przenosimy projekt w teren i oznaczamy punkty potrzebne do rozpoczęcia prac.' },
+  { title: 'Wykonawca może działać', description: 'Po wykonaniu zakresu masz wyjaśnione, co zostało wytyczone i co jest kolejnym etapem.' }
+];
+
+const faq = [
+  { question: 'Kiedy zamówić tyczenie budynku?', answer: 'Przed rozpoczęciem tych robót, które wymagają przeniesienia położenia projektowanego obiektu z dokumentacji w teren. Termin najlepiej ustalić wcześniej względem harmonogramu budowy.' },
+  { question: 'Jakie dokumenty są potrzebne do tyczenia?', answer: 'Zakres zależy od inwestycji i dokumentacji projektowej. Po pierwszym kontakcie wskażemy, co dokładnie należy przygotować.' },
+  { question: 'Czy inwestor musi być na miejscu?', answer: 'To zależy od dostępu do nieruchomości i organizacji prac. Ustalamy to przed terminem pomiaru.' }
+];
+---
+
+<ServicePage
+  seoTitle="Tyczenie budynku Oleśnica | Geodeta KT-GEO"
+  description="Tyczenie budynku i obiektów w Oleśnicy i okolicach. Przeniesienie projektu w teren, jasny zakres prac i przygotowanie do rozpoczęcia robót."
+  eyebrow="Tyczenie budynku · Oleśnica"
+  title="Projekt na papierze trzeba precyzyjnie przenieść w teren."
+  intro="Wytyczamy budynki i inne projektowane elementy zgodnie z dokumentacją. Przed przyjazdem ustalamy zakres i potrzebne materiały, żeby wykonawca wiedział, na czym pracuje."
+  image="/construction-aerial.webp"
+  imageAlt="Budowa i prace geodezyjne związane z tyczeniem obiektu"
+  forWhom={forWhom}
+  youGet={youGet}
+  steps={steps}
+  faq={faq}
+/>
