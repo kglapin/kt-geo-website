@@ -31,24 +31,24 @@ const services = [
   <div class="main-grid-container">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 mb-12 md:mb-16" data-animate>
       <div class="lg:col-span-7">
-        <p class="text-sm font-display font-medium tracking-[0.15em] uppercase text-brand-red">Zakres usług</p>
-        <h2 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl tracking-[-0.04em] leading-[1.02] mt-4">Geodezja dla budowy i nieruchomości.</h2>
+        <p class="type-eyebrow">Zakres usług</p>
+        <h2 class="type-display-lg mt-5 max-w-[12ch]">Geodezja dla budowy i nieruchomości.</h2>
       </div>
-      <div class="lg:col-span-5 lg:pt-9">
-        <p class="text-[#666] text-lg leading-relaxed max-w-lg">Obsługujemy typowe prace geodezyjne związane z przygotowaniem inwestycji, jej realizacją oraz sprawami dotyczącymi działek i granic.</p>
+      <div class="lg:col-span-5 lg:pt-10">
+        <p class="type-lead max-w-[48ch]">Obsługujemy typowe prace geodezyjne związane z przygotowaniem inwestycji, jej realizacją oraz sprawami dotyczącymi działek i granic.</p>
       </div>
     </div>
 
     <div class="border-t border-[#d9d9d9]">
       {services.map((service, index) => (
         <a href={service.href} class="group grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-8 py-8 md:py-10 border-b border-[#d9d9d9] items-center" data-animate>
-          <div class="md:col-span-1 text-xs font-display font-semibold tracking-[0.14em] text-[#999]">0{index + 1}</div>
+          <div class="md:col-span-1 type-meta text-[#999]">0{index + 1}</div>
           <div class="md:col-span-4 overflow-hidden aspect-[16/10] bg-[#eee]">
             <img src={service.image} alt={service.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.025]" loading="lazy" />
           </div>
           <div class="md:col-span-6">
-            <h3 class="font-display font-bold text-2xl md:text-3xl tracking-tight text-[#111] group-hover:text-brand-red transition-colors">{service.title}</h3>
-            <p class="text-[#666] leading-relaxed mt-3 max-w-2xl">{service.description}</p>
+            <h3 class="type-display-md text-[#111] group-hover:text-brand-red transition-colors">{service.title}</h3>
+            <p class="type-body text-[#666] mt-3 max-w-[56ch]">{service.description}</p>
           </div>
           <div class="md:col-span-1 md:flex md:justify-end text-[#999] group-hover:text-brand-red transition-colors text-xl">→</div>
         </a>
@@ -56,8 +56,8 @@ const services = [
     </div>
 
     <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
-      <p class="text-sm text-[#777]">Nie widzisz swojej usługi na liście?</p>
-      <a href="#kontakt" class="text-sm font-semibold text-[#111] hover:text-brand-red transition-colors">Opisz sprawę i zapytaj →</a>
+      <p class="text-[0.9375rem] text-[#777]">Nie widzisz swojej usługi na liście?</p>
+      <a href="#kontakt" class="text-[0.9375rem] font-semibold text-[#111] hover:text-brand-red transition-colors">Opisz sprawę i zapytaj →</a>
     </div>
   </div>
 </section>
