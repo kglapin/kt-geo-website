@@ -1,0 +1,65 @@
+---
+const faqs = [
+  {
+    question: 'Nie wiem, jakiej usługi geodezyjnej potrzebuję. Czy mogę po prostu opisać sytuację?',
+    answer: 'Tak. Wystarczy opisać, co planujesz zrobić z działką albo na jakim etapie budowy jesteś. Na tej podstawie można ustalić, czy potrzebna jest mapa, tyczenie, inwentaryzacja czy praca związana z granicami.'
+  },
+  {
+    question: 'Od czego zależy koszt usługi geodezyjnej?',
+    answer: 'Cena zależy m.in. od rodzaju pracy, lokalizacji, zakresu opracowania, powierzchni i dostępnych materiałów. Dlatego do wyceny najlepiej podać miejscowość oraz — jeśli go znasz — numer działki i obręb.'
+  },
+  {
+    question: 'Jak długo trwa przygotowanie mapy do celów projektowych?',
+    answer: 'Termin zależy od konkretnej działki, zakresu pomiaru i materiałów pozyskiwanych z zasobu geodezyjnego. Po wskazaniu lokalizacji można podać realny termin dla danej sprawy.'
+  },
+  {
+    question: 'Czy muszę być obecny podczas pomiarów?',
+    answer: 'W wielu typowych pracach obecność właściciela nie jest konieczna, ale zależy to od rodzaju czynności i dostępu do nieruchomości. Ustalamy to przed przyjazdem w teren.'
+  },
+  {
+    question: 'Kiedy potrzebuję tyczenia budynku?',
+    answer: 'Tyczenie wykonuje się przed rozpoczęciem robót budowlanych, aby przenieść położenie projektowanego obiektu z dokumentacji w teren.'
+  },
+  {
+    question: 'Kiedy wykonuje się inwentaryzację powykonawczą?',
+    answer: 'Po wykonaniu obiektów wymagających pomiaru powykonawczego. Jej wyniki są wykorzystywane w dokumentacji potrzebnej do zakończenia odpowiedniego etapu inwestycji.'
+  },
+  {
+    question: 'Czy obsługujecie tylko Oleśnicę?',
+    answer: 'Nie. KT-GEO obsługuje Oleśnicę i okoliczne miejscowości. Przy dalszych lokalizacjach najlepiej przesłać adres lub numer działki i potwierdzić możliwość realizacji.'
+  }
+];
+---
+
+<section id="faq" class="py-20 md:py-28 bg-white scroll-mt-16">
+  <div class="main-grid-container">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+      <div class="lg:col-span-4" data-animate>
+        <span class="section-kicker">Najczęstsze pytania</span>
+        <h2 class="section-title mt-4">Zanim zadzwonisz.</h2>
+        <p class="section-lead mt-4">Krótko odpowiadamy na pytania, które najczęściej pojawiają się przed zleceniem pracy geodezyjnej.</p>
+        <a href="#kontakt" class="inline-flex items-center gap-2 mt-7 text-sm font-semibold text-[#111] hover:text-brand-red transition-colors">
+          Masz inne pytanie? Napisz lub zadzwoń
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" /></svg>
+        </a>
+      </div>
+
+      <div class="lg:col-span-8 border-t border-[#dedede]" data-animate>
+        {faqs.map((faq) => (
+          <details class="group border-b border-[#dedede]">
+            <summary class="list-none cursor-pointer py-6 md:py-7 flex items-start justify-between gap-6">
+              <span class="font-display font-semibold text-lg md:text-xl text-[#111] leading-snug">{faq.question}</span>
+              <span class="relative w-6 h-6 shrink-0 mt-0.5">
+                <span class="absolute left-1/2 top-1/2 w-4 h-px bg-[#111] -translate-x-1/2 -translate-y-1/2"></span>
+                <span class="absolute left-1/2 top-1/2 w-px h-4 bg-[#111] -translate-x-1/2 -translate-y-1/2 transition-transform group-open:rotate-90 group-open:opacity-0"></span>
+              </span>
+            </summary>
+            <div class="pb-6 md:pb-7 pr-8 md:pr-16">
+              <p class="text-[#666] leading-relaxed max-w-2xl">{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
