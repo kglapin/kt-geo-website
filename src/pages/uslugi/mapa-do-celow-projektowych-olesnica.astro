@@ -2,36 +2,36 @@
 import ServicePage from '../../components/ServicePage.astro';
 
 const forWhom = [
-  'rozpoczynasz projekt domu, budynku lub innej inwestycji i projektant potrzebuje aktualnej mapy',
-  'chcesz przygotować dokumentację projektową na konkretnej działce',
-  'potrzebujesz aktualnego obrazu sytuacji terenowej i uzbrojenia do dalszych prac projektowych'
+  'projektant potrzebuje aktualnej mapy do przygotowania projektu zagospodarowania działki lub terenu',
+  'rozpoczynasz projekt domu, budynku albo innej inwestycji',
+  'potrzebne jest aktualne opracowanie sytuacji terenowej i uzbrojenia dla konkretnej działki'
 ];
 
 const youGet = [
   'pomiar terenowy w zakresie potrzebnym do opracowania mapy',
-  'opracowanie mapy do celów projektowych dla wskazanej inwestycji',
-  'jasną informację, jakie dane i materiały są potrzebne przed rozpoczęciem pracy'
+  'mapę do celów projektowych przygotowaną dla wskazanej inwestycji',
+  'informację, jakie dane lub materiały trzeba przekazać przed rozpoczęciem pracy'
 ];
 
 const steps = [
-  { title: 'Podajesz lokalizację', description: 'Wystarczy miejscowość i — jeśli go znasz — numer działki oraz obręb.' },
-  { title: 'Ustalamy zakres', description: 'Weryfikujemy potrzeby projektu i wykonujemy niezbędne czynności oraz pomiar w terenie.' },
-  { title: 'Otrzymujesz mapę', description: 'Przekazujemy opracowanie przygotowane do wykorzystania w dalszym procesie projektowym.' }
+  { title: 'Lokalizacja i zakres', description: 'Podajesz miejscowość oraz — jeśli go znasz — numer działki i obręb. Ustalamy przeznaczenie mapy.' },
+  { title: 'Pomiar terenowy', description: 'Wykonujemy potrzebne czynności terenowe i kompletujemy materiały niezbędne do opracowania.' },
+  { title: 'Opracowanie mapy', description: 'Przygotowujemy mapę do wykorzystania przez projektanta w dalszym procesie inwestycyjnym.' }
 ];
 
 const faq = [
-  { question: 'Od czego zależy cena mapy do celów projektowych?', answer: 'Od lokalizacji, powierzchni i charakteru terenu, zakresu opracowania oraz dostępnych materiałów. Najszybciej wycenimy usługę po podaniu działki.' },
-  { question: 'Jak długo trwa wykonanie mapy?', answer: 'Termin zależy od konkretnej sprawy oraz materiałów potrzebnych do opracowania. Po wskazaniu lokalizacji można podać realny termin realizacji.' },
-  { question: 'Czy muszę wiedzieć, jakiego formatu mapy potrzebuje projektant?', answer: 'Nie musisz znać wszystkich parametrów technicznych. W pierwszej rozmowie ustalimy przeznaczenie mapy i potrzebny zakres.' }
+  { question: 'Od czego zależy cena mapy do celów projektowych?', answer: 'Od lokalizacji, powierzchni i charakteru terenu, zakresu opracowania oraz materiałów potrzebnych do wykonania pracy. Do wstępnej wyceny najlepiej podać numer działki.' },
+  { question: 'Jak długo trwa wykonanie mapy?', answer: 'Termin zależy od konkretnej działki, zakresu pomiaru i materiałów potrzebnych do opracowania. Po wskazaniu lokalizacji możemy określić realny termin.' },
+  { question: 'Co przygotować przed zleceniem?', answer: 'Najważniejsza jest lokalizacja inwestycji. Jeśli masz numer działki, obręb lub informacje od projektanta, warto je również przesłać.' }
 ];
 ---
 
 <ServicePage
   seoTitle="Mapa do celów projektowych Oleśnica | KT-GEO"
-  description="Mapa do celów projektowych w Oleśnicy i okolicach. Pomiar terenu i opracowanie mapy dla projektanta. Sprawdź zakres i poproś o wycenę."
-  eyebrow="Mapa do celów projektowych · Oleśnica"
-  title="Mapa, od której może zacząć się Twój projekt."
-  intro="Przygotowujemy mapy do celów projektowych dla inwestycji w Oleśnicy i okolicach. Najpierw ustalamy przeznaczenie i zakres, potem wykonujemy pomiar i opracowanie potrzebne projektantowi."
+  description="Mapa do celów projektowych w Oleśnicy i okolicach. Pomiar terenu i opracowanie mapy dla projektanta. Zapytaj o zakres, termin i wycenę."
+  eyebrow="Oleśnica i okolice"
+  title="Mapa do celów projektowych"
+  intro="Wykonujemy mapy do celów projektowych dla budowy domów i innych inwestycji. Zakres ustalamy na podstawie lokalizacji oraz przeznaczenia opracowania."
   image="/topographic-detail.webp"
   imageAlt="Fragment opracowania geodezyjnego i pomiar terenu"
   forWhom={forWhom}
