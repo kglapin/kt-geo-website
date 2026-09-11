@@ -1,0 +1,41 @@
+---
+import ServicePage from '../../components/ServicePage.astro';
+
+const forWhom = [
+  'chcesz wydzielić z nieruchomości jedną lub kilka nowych działek',
+  'przygotowujesz nieruchomość do sprzedaży, darowizny albo innej zmiany własnościowej',
+  'potrzebujesz ustalić, jaki zakres prac geodezyjnych będzie wymagany przy planowanym podziale'
+];
+
+const youGet = [
+  'informację o kolejnych etapach geodezyjnej części podziału',
+  'pomiary i dokumentację w zakresie właściwym dla konkretnej nieruchomości',
+  'wskazanie dokumentów i informacji potrzebnych do rozpoczęcia pracy'
+];
+
+const steps = [
+  { title: 'Działka i plan podziału', description: 'Podajesz numer działki, lokalizację i opisujesz, jaki podział chcesz wykonać.' },
+  { title: 'Ustalenie zakresu', description: 'Sprawdzamy, jakie czynności geodezyjne są potrzebne w danej sprawie i ustalamy dalszy przebieg.' },
+  { title: 'Prace geodezyjne', description: 'Wykonujemy ustalony zakres pomiarów i przygotowujemy dokumentację związaną z podziałem.' }
+];
+
+const faq = [
+  { question: 'Czy każdy podział działki przebiega tak samo?', answer: 'Nie. Zakres i tryb zależą od celu podziału, nieruchomości oraz uwarunkowań formalnych. Dlatego wycenę zaczynamy od konkretnej działki.' },
+  { question: 'Co podać przy pierwszym kontakcie?', answer: 'Najlepiej numer działki, lokalizację oraz krótki opis planowanego podziału.' },
+  { question: 'Czy geodeta prowadzi całą procedurę?', answer: 'Zakres obsługi zależy od konkretnej sprawy. Na początku określamy, które czynności wykonuje geodeta, a które wymagają działań właściciela lub urzędu.' }
+];
+---
+
+<ServicePage
+  seoTitle="Podział działki Oleśnica | KT-GEO"
+  description="Podziały działek i nieruchomości w Oleśnicy i okolicach. Prace geodezyjne, pomiary i dokumentacja związana z podziałem nieruchomości."
+  eyebrow="Oleśnica i okolice"
+  title="Podział działki"
+  intro="Wykonujemy prace geodezyjne związane z podziałami nieruchomości. Zakres zależy od konkretnej działki, celu podziału i wymaganej procedury."
+  image="/green-field-aerial.webp"
+  imageAlt="Działki i teren objęty pracami geodezyjnymi"
+  forWhom={forWhom}
+  youGet={youGet}
+  steps={steps}
+  faq={faq}
+/>

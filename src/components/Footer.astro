@@ -4,35 +4,31 @@ const currentYear = new Date().getFullYear();
 <footer class="bg-brand-black pt-16 pb-8">
   <div class="main-grid-container">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-white/10">
-      <!-- Logo + desc -->
-      <div class="md:col-span-4 flex flex-col gap-4">
-        <img src="/kt-geo-logo-white.svg" alt="KT-GEO" class="h-8 w-auto" loading="lazy" />
-        <p class="text-sm text-white/40 leading-relaxed max-w-xs">
-          Profesjonalne usługi geodezyjne w Oleśnicy i okolicach. mgr inż. Kamil Nowakowski.
-        </p>
+      <div class="md:col-span-5 flex flex-col gap-4">
+        <img src="/kt-geo-logo-white.svg" alt="KT-GEO" class="h-8 w-auto self-start" loading="lazy" />
+        <p class="text-[0.9375rem] leading-[1.55] text-white/42 max-w-[39ch]">Usługi geodezyjne w Oleśnicy i okolicach — mapy, tyczenia, inwentaryzacje, podziały i sprawy graniczne.</p>
       </div>
 
-      <!-- Links -->
       <div class="md:col-span-3 flex flex-col gap-3">
-        <span class="text-xs font-display font-medium text-white/20 tracking-widest uppercase">Nawigacja</span>
-        <a href="#uslugi" class="text-sm text-white/50 hover:text-white transition-colors">Usługi</a>
-        <a href="#o-nas" class="text-sm text-white/50 hover:text-white transition-colors">O nas</a>
-        <a href="#opinie" class="text-sm text-white/50 hover:text-white transition-colors">Opinie</a>
-        <a href="#kontakt" class="text-sm text-white/50 hover:text-white transition-colors">Kontakt</a>
+        <span class="type-meta text-white/24">Nawigacja</span>
+        <a href="/#uslugi" class="text-[0.9375rem] text-white/52 hover:text-white transition-colors">Usługi</a>
+        <a href="/#o-nas" class="text-[0.9375rem] text-white/52 hover:text-white transition-colors">O firmie</a>
+        <a href="/#jak-pracujemy" class="text-[0.9375rem] text-white/52 hover:text-white transition-colors">Jak pracujemy</a>
+        <a href="/#opinie" class="text-[0.9375rem] text-white/52 hover:text-white transition-colors">Opinie</a>
       </div>
 
-      <!-- Contact -->
-      <div class="md:col-span-5 flex flex-col gap-3">
-        <span class="text-xs font-display font-medium text-white/20 tracking-widest uppercase">Kontakt</span>
-        <a href="tel:791122618" class="text-sm text-white/50 hover:text-white transition-colors">791 122 618</a>
-        <p class="text-sm text-white/50">ul. Brzozowa 10M/3, 56-400 Oleśnica</p>
-        <p class="text-sm text-white/50">NIP: 9112051898 · KRS: 0001094982</p>
+      <div class="md:col-span-4 flex flex-col gap-3">
+        <span class="type-meta text-white/24">Kontakt</span>
+        <a href="tel:791122618" class="text-[0.9375rem] text-white/62 hover:text-white transition-colors">791 122 618</a>
+        <a href="mailto:geodezjakamilnowakowski@gmail.com" class="text-[0.9375rem] text-white/62 hover:text-white transition-colors break-all">geodezjakamilnowakowski@gmail.com</a>
+        <p class="text-[0.9375rem] leading-[1.5] text-white/42">ul. Brzozowa 10M/3, 56-400 Oleśnica</p>
+        <p class="type-meta normal-case tracking-[0.02em] text-white/26">NIP: 9112051898 · KRS: 0001094982</p>
       </div>
     </div>
 
-    <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
-      <p class="text-xs text-white/20">&copy; {currentYear} KTGEO Sp. z o.o.</p>
-      <p class="text-xs text-white/20">Geodezja · Kartografia · Precyzja</p>
+    <div class="pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+      <p class="type-meta normal-case tracking-[0.02em] text-white/22">&copy; {currentYear} KTGEO Sp. z o.o.</p>
+      <a href="/#kontakt" class="text-[0.875rem] font-semibold text-white/38 hover:text-brand-red transition-colors">Kontakt →</a>
     </div>
   </div>
 </footer>

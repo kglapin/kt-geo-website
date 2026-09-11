@@ -2,28 +2,32 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
-import Process from '../components/Process.astro';
 import Services from '../components/Services.astro';
+import FieldInterlude from '../components/FieldInterlude.astro';
 import TrustSection from '../components/TrustSection.astro';
+import Process from '../components/Process.astro';
 import Reviews from '../components/Reviews.astro';
 import ContactForm from '../components/ContactForm.astro';
+import MobileCta from '../components/MobileCta.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout
-	title="KT-GEO Geodezja Oleśnica | Usługi Geodezyjne - mgr inż. Kamil Nowakowski"
-	description="KT-GEO Sp. z o.o. - Profesjonalne usługi geodezyjne w Oleśnicy i okolicach. Tyczenie budynków, mapy do celów projektowych, inwentaryzacje powykonawcze, podziały nieruchomości. Tel: 791 122 618."
+  title="Geodeta Oleśnica i okolice | KT-GEO"
+  description="Usługi geodezyjne w Oleśnicy i okolicach: mapy do celów projektowych, tyczenie budynków, inwentaryzacje powykonawcze, podziały nieruchomości i prace związane z granicami działek."
 >
-	<Header />
+  <Header />
 
-	<main class="flex-grow">
-		<Hero />
-		<Process />
-		<Services />
-		<TrustSection />
-		<Reviews />
-		<ContactForm />
-	</main>
+  <main class="flex-grow">
+    <Hero />
+    <Services />
+    <FieldInterlude />
+    <TrustSection />
+    <Process />
+    <Reviews />
+    <ContactForm />
+  </main>
 
-	<Footer />
+  <Footer />
+  <MobileCta />
 </Layout>

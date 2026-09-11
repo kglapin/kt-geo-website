@@ -1,61 +1,42 @@
 ---
 ---
-<section class="relative bg-brand-black min-h-[85vh] flex items-center overflow-hidden">
-  <div class="absolute inset-0 z-0">
-    <img id="hero-bg-img" src="/hero-bg-surveying.webp" alt="" class="w-full h-full object-cover opacity-25 scale-105" width="1920" height="1280" fetchpriority="high" />
-    <div class="absolute inset-0 bg-gradient-to-r from-brand-black/95 via-brand-black/80 to-brand-black/60"></div>
-  </div>
+<section class="relative bg-brand-black text-white overflow-hidden">
+  <div class="main-grid-container grid grid-cols-1 lg:grid-cols-12 min-h-[calc(100vh-4rem)] lg:min-h-[760px] items-center gap-10 lg:gap-14 py-14 md:py-20 lg:py-16">
+    <div class="lg:col-span-6 xl:col-span-5" data-hero-content>
+      <p class="type-eyebrow mb-7">Geodezja i kartografia · Oleśnica</p>
 
-  <div class="main-grid-container relative z-10 py-12 md:py-32 flex flex-col items-center text-center gap-6 md:gap-8">
-    <div class="flex items-center gap-2">
-      <span class="w-2 h-2 rounded-full bg-brand-red"></span>
-      <span class="text-sm font-display font-medium text-white/50 tracking-widest uppercase">Oleśnica · Dolny Śląsk</span>
-    </div>
+      <h1 data-hero-h1 class="type-display-xl max-w-[11ch]">
+        Usługi geodezyjne w Oleśnicy i okolicach.
+      </h1>
 
-    <h1 data-hero-h1 class="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[1.05] max-w-4xl">
-      Buduj bez opóźnień i stresu.<br />
-      <span class="text-white/30">Pomiary geodezyjne w Oleśnicy, z którymi urzędy nie dyskutują.</span>
-    </h1>
+      <p data-hero-p class="type-lead text-white/62 mt-7 max-w-[54ch]">
+        Mapy do celów projektowych, tyczenie budynków, inwentaryzacje powykonawcze, podziały nieruchomości oraz prace związane z granicami działek.
+      </p>
 
-    <p data-hero-p class="text-lg sm:text-xl text-white/50 max-w-2xl leading-relaxed">
-      Od mapy projektowej po inwentaryzację powykonawczą — dbamy o każdy milimetr, żeby Twoja inwestycja ruszyła i zakończyła się bez przeszkód.
-    </p>
-
-    <div data-hero-cta class="flex flex-col sm:flex-row items-center gap-4 mt-4">
-      <a href="#kontakt" class="inline-flex items-center gap-2 bg-brand-red text-white font-display font-semibold px-8 py-4 rounded transition-all hover:bg-brand-red-dark">
-        Odbierz darmową wycenę (w 15 minut)
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" /></svg>
-      </a>
-      <a href="tel:791122618" class="inline-flex items-center gap-2 text-white/60 font-display font-medium px-8 py-4 rounded border border-white/15 transition-all hover:text-white hover:border-white/30">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
-        791 122 618
-      </a>
-    </div>
-
-    <p class="text-sm text-white/25 mt-2">Dołącz do 500+ inwestorów, którzy zaoszczędzili czas i nerwy.</p>
-  </div>
-
-  <!-- Social Proof pas -->
-  <div class="absolute bottom-0 left-0 right-0 z-10 bg-white/5 backdrop-blur-sm border-t border-white/10">
-    <div class="main-grid-container py-6 grid grid-cols-3 gap-8 text-center">
-      <div class="flex flex-col items-center gap-1">
-        <span data-counter="500" data-suffix="+" class="font-display font-bold text-2xl md:text-3xl text-white">500+</span>
-        <span class="text-xs text-white/40 font-medium">zrealizowanych projektów</span>
+      <div data-hero-cta class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mt-9">
+        <a href="#kontakt" class="inline-flex items-center justify-center bg-brand-red text-white text-[0.9375rem] leading-none font-semibold tracking-[-0.006em] px-7 py-[1.05rem] transition-colors hover:bg-brand-red-dark">
+          Zapytaj o wycenę
+        </a>
+        <a href="tel:791122618" class="inline-flex items-center justify-center gap-2 px-5 py-[1.05rem] text-white/75 text-[0.9375rem] leading-none font-semibold tracking-[-0.006em] hover:text-white transition-colors">
+          791 122 618
+        </a>
       </div>
-      <div class="flex flex-col items-center gap-1">
-        <span class="font-display font-bold text-2xl md:text-3xl text-white">5.0</span>
-        <span class="text-xs text-white/40 font-medium">Google Reviews</span>
-      </div>
-      <div class="flex flex-col items-center gap-1">
-        <span class="font-display font-bold text-2xl md:text-3xl text-white">15 min</span>
-        <span class="text-xs text-white/40 font-medium">czas odpowiedzi</span>
+
+      <div class="mt-11 pt-6 border-t border-white/10 flex flex-wrap gap-x-7 gap-y-2 text-[0.9375rem] leading-snug text-white/42">
+        <span>Geodeta uprawniony</span>
+        <span>Klienci indywidualni i inwestorzy</span>
       </div>
     </div>
-  </div>
 
-  <!-- Scroll indicator -->
-  <div class="absolute bottom-28 md:bottom-24 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
-    <span class="text-[10px] text-white/20 tracking-widest uppercase font-display">Przewiń</span>
-    <div class="w-px h-8 bg-white/15"></div>
+    <div class="lg:col-span-6 xl:col-span-7 lg:pl-4" data-animate>
+      <div class="relative overflow-hidden min-h-[420px] sm:min-h-[520px] lg:min-h-[640px]">
+        <img id="hero-bg-img" src="/hero-bg-surveying.webp" alt="Geodeta podczas pomiarów w terenie" class="absolute inset-0 w-full h-full object-cover" width="1200" height="900" fetchpriority="high" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent"></div>
+        <div class="absolute left-0 bottom-0 bg-brand-black/90 border-t border-r border-white/10 px-5 py-4 max-w-xs">
+          <p class="type-meta text-white/38">KT-GEO</p>
+          <p class="text-[0.9375rem] leading-[1.45] text-white/78 mt-1.5">Obsługa geodezyjna inwestycji i nieruchomości.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

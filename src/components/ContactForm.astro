@@ -1,115 +1,86 @@
 ---
 ---
-<section id="kontakt" class="py-20 md:py-28 bg-[#f5f5f5] scroll-mt-16">
-  <div class="main-grid-container flex flex-col gap-14">
-    <div class="flex flex-col gap-4" data-animate>
-      <span class="text-sm font-display font-medium text-brand-red tracking-widest uppercase">Kontakt</span>
-      <h2 class="font-display font-bold text-4xl md:text-5xl text-[#111] tracking-tight">Zróbmy pierwszy krok. To darmowe.</h2>
-      <p class="text-[#666] text-lg max-w-xl">Wycena jest bezpłatna. Opisz projekt — oddzwonimy w 15 minut z konkretną propozycją.</p>
-    </div>
+<section id="kontakt" class="py-20 md:py-28 bg-[#f3f3f1] scroll-mt-16">
+  <div class="main-grid-container">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+      <div class="lg:col-span-5" data-animate>
+        <p class="type-eyebrow">Kontakt</p>
+        <h2 class="type-display-lg mt-5 max-w-[10ch]">Zapytaj o usługę geodezyjną.</h2>
+        <p class="type-lead text-[#555] mt-6 max-w-[43ch]">Podaj lokalizację i krótko opisz sprawę. Jeśli znasz numer działki, dopisz go w formularzu.</p>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-      <!-- Form -->
-      <div class="lg:col-span-7" data-animate>
-        <form id="geodesy-form" class="flex flex-col gap-5">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div class="flex flex-col gap-1.5">
-              <label for="name" class="text-sm font-medium text-[#111]">Imię</label>
-              <input type="text" id="name" name="name" required placeholder="Jan"
-                class="w-full px-4 py-3 rounded-lg border border-[#e5e5e5] bg-white focus:outline-none focus:border-[#111] transition-colors text-sm" />
-            </div>
-            <div class="flex flex-col gap-1.5">
-              <label for="phone" class="text-sm font-medium text-[#111]">Telefon</label>
-              <input type="tel" id="phone" name="phone" required placeholder="500 600 700"
-                class="w-full px-4 py-3 rounded-lg border border-[#e5e5e5] bg-white focus:outline-none focus:border-[#111] transition-colors text-sm" />
-            </div>
+        <div class="mt-10 pt-7 border-t border-[#d5d5d2] space-y-7">
+          <div>
+            <p class="type-meta text-[#8c8c8c]">Telefon</p>
+            <a href="tel:791122618" class="inline-block font-display font-semibold text-[1.85rem] leading-tight tracking-[-0.025em] text-[#111] mt-1.5 hover:text-brand-red transition-colors">791 122 618</a>
           </div>
-
-          <div class="flex flex-col gap-1.5">
-            <label for="email" class="text-sm font-medium text-[#111]">Email</label>
-            <input type="email" id="email" name="email" placeholder="jan@email.com"
-              class="w-full px-4 py-3 rounded-lg border border-[#e5e5e5] bg-white focus:outline-none focus:border-[#111] transition-colors text-sm" />
+          <div>
+            <p class="type-meta text-[#8c8c8c]">E-mail</p>
+            <a href="mailto:geodezjakamilnowakowski@gmail.com" class="inline-block text-[1.0625rem] leading-snug text-[#111] mt-1.5 hover:text-brand-red transition-colors break-all">geodezjakamilnowakowski@gmail.com</a>
           </div>
-
-          <div class="flex flex-col gap-1.5">
-            <label for="stage" class="text-sm font-medium text-[#111]">Na jakim etapie jesteś?</label>
-            <select id="stage" name="stage" required
-              class="w-full px-4 py-3 rounded-lg border border-[#e5e5e5] bg-white focus:outline-none focus:border-[#111] transition-colors text-sm">
-              <option value="" disabled selected>Wybierz...</option>
-              <option value="planuje">Planuję budowę — potrzebuję mapy do celów projektowych</option>
-              <option value="buduje">Buduję — potrzebuję tyczenia budynku</option>
-              <option value="koncze">Kończę budowę — potrzebuję inwentaryzacji</option>
-              <option value="granica">Sprawa graniczna — podział lub wznowienie</option>
-              <option value="inne">Inna sprawa geodezyjna</option>
-            </select>
+          <div>
+            <p class="type-meta text-[#8c8c8c]">Adres</p>
+            <p class="text-[1.0625rem] leading-[1.5] text-[#555] mt-1.5">ul. Brzozowa 10M/3<br />56-400 Oleśnica</p>
           </div>
-
-          <div class="flex flex-col gap-1.5">
-            <label for="message" class="text-sm font-medium text-[#111]">Opisz, czego potrzebujesz</label>
-            <textarea id="message" name="message" rows="4" placeholder="np. Potrzebuję mapy do celów projektowych dla działki nr 123 w Oleśnicy..."
-              class="w-full px-4 py-3 rounded-lg border border-[#e5e5e5] bg-white focus:outline-none focus:border-[#111] transition-colors text-sm resize-none"></textarea>
-          </div>
-
-          <label for="rodo" class="flex items-start gap-3 cursor-pointer py-1">
-            <input type="checkbox" id="rodo" name="rodo" required class="rodo-checkbox" />
-            <span class="text-xs text-[#666] leading-relaxed">
-              Wyrażam zgodę na przetwarzanie danych osobowych w celu przygotowania bezpłatnej wyceny.
-            </span>
-          </label>
-
-          <button type="submit"
-            class="w-full bg-[#111] text-white font-display font-semibold py-3.5 rounded-lg transition-all hover:bg-brand-red text-sm tracking-wide">
-            Wyślij niezobowiązujące zapytanie
-          </button>
-        </form>
+          <div class="type-meta normal-case tracking-[0.025em] text-[#888] pt-2">KTGEO Sp. z o.o. · NIP 9112051898 · KRS 0001094982</div>
+        </div>
       </div>
 
-      <!-- Contact info -->
-      <div class="lg:col-span-5 flex flex-col gap-8" data-animate>
-        <div class="flex flex-col gap-6">
-          <div class="flex items-start gap-4">
-            <div class="w-1 h-1 rounded-full bg-brand-red mt-2.5 shrink-0"></div>
-            <div>
-              <p class="font-display font-semibold text-[#111] text-sm">Adres</p>
-              <p class="text-sm text-[#666]">ul. Brzozowa 10M/3</p>
-              <p class="text-sm text-[#666]">56-400 Oleśnica</p>
+      <div class="lg:col-span-7" data-animate>
+        <form id="geodesy-form" class="border-t border-[#cfcfcb]">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 border-b border-[#cfcfcb] py-6">
+            <div class="sm:col-span-2">
+              <label for="service" class="form-label">Rodzaj sprawy</label>
+              <select id="service" name="service" required class="form-field mt-2">
+                <option value="" disabled selected>Wybierz usługę</option>
+                <option value="mapa">Mapa do celów projektowych</option>
+                <option value="tyczenie">Tyczenie budynku / obiektu</option>
+                <option value="inwentaryzacja">Inwentaryzacja powykonawcza</option>
+                <option value="podzial">Podział działki / nieruchomości</option>
+                <option value="granice">Granice / wznowienie / ustalenie</option>
+                <option value="inne">Inna sprawa geodezyjna</option>
+                <option value="nie-wiem">Nie wiem, czego potrzebuję</option>
+              </select>
             </div>
           </div>
-          <div class="flex items-start gap-4">
-            <div class="w-1 h-1 rounded-full bg-brand-red mt-2.5 shrink-0"></div>
-            <div>
-              <p class="font-display font-semibold text-[#111] text-sm">Telefon</p>
-              <a href="tel:791122618" class="text-sm text-[#666] hover:text-brand-red transition-colors">791 122 618</a>
-            </div>
-          </div>
-          <div class="flex items-start gap-4">
-            <div class="w-1 h-1 rounded-full bg-brand-red mt-2.5 shrink-0"></div>
-            <div>
-              <p class="font-display font-semibold text-[#111] text-sm">Godziny pracy</p>
-              <p class="text-sm text-[#666]">Pon-Pt: 8:00 – 16:00</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-4">
-            <div class="w-1 h-1 rounded-full bg-brand-red mt-2.5 shrink-0"></div>
-            <div>
-              <p class="font-display font-semibold text-[#111] text-sm">Firma</p>
-              <p class="text-sm text-[#666]">KTGEO Sp. z o.o.</p>
-              <p class="text-sm text-[#666]">NIP: 9112051898</p>
-              <p class="text-sm text-[#666]">KRS: 0001094982</p>
-            </div>
-          </div>
-        </div>
 
-        <div class="rounded-xl overflow-hidden h-[200px] border border-[#e5e5e5]">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2500!2d17.397!3d51.213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc1e5a3b3c5b1%3A0x123456!2sBrzozowa+10M%2C+56-400+Ole%C5%9Bnica!5e0!3m2!1spl!2spl"
-            class="w-full h-full border-0 grayscale"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Lokalizacja KT-GEO"
-          ></iframe>
-        </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 border-b border-[#cfcfcb] py-6">
+            <div>
+              <label for="location" class="form-label">Miejscowość / lokalizacja</label>
+              <input type="text" id="location" name="location" required placeholder="np. Oleśnica" class="form-field mt-2" />
+            </div>
+            <div>
+              <label for="parcel" class="form-label">Numer działki <span class="font-normal text-[#999]">(opcjonalnie)</span></label>
+              <input type="text" id="parcel" name="parcel" placeholder="np. 123/4" class="form-field mt-2" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 border-b border-[#cfcfcb] py-6">
+            <div>
+              <label for="name" class="form-label">Imię</label>
+              <input type="text" id="name" name="name" required placeholder="Jan" class="form-field mt-2" />
+            </div>
+            <div>
+              <label for="phone" class="form-label">Telefon</label>
+              <input type="tel" id="phone" name="phone" required placeholder="500 600 700" class="form-field mt-2" />
+            </div>
+          </div>
+
+          <div class="border-b border-[#cfcfcb] py-6">
+            <label for="message" class="form-label">Krótki opis sprawy <span class="font-normal text-[#999]">(opcjonalnie)</span></label>
+            <textarea id="message" name="message" rows="4" placeholder="Napisz, czego dotyczy zlecenie..." class="form-field mt-2 resize-none"></textarea>
+          </div>
+
+          <label for="rodo" class="flex items-start gap-3 cursor-pointer py-6">
+            <input type="checkbox" id="rodo" name="rodo" required class="rodo-checkbox" />
+            <span class="text-[0.8125rem] leading-[1.45] text-[#666]">Wyrażam zgodę na przetwarzanie podanych danych w celu kontaktu w sprawie mojego zapytania.</span>
+          </label>
+
+          <button type="submit" class="inline-flex items-center justify-center bg-brand-red text-white text-[0.9375rem] leading-none font-semibold tracking-[-0.006em] py-[1.05rem] px-7 transition-colors hover:bg-brand-red-dark">
+            Przygotuj wiadomość e-mail
+          </button>
+          <p class="text-[0.8125rem] leading-[1.45] text-[#888] mt-3">Formularz otworzy gotową wiadomość w Twoim programie pocztowym.</p>
+          <p id="form-status" class="hidden text-[0.9375rem] mt-4 text-[#555]" aria-live="polite"></p>
+        </form>
       </div>
     </div>
   </div>
@@ -117,23 +88,54 @@
 
 <script>
   const form = document.getElementById('geodesy-form') as HTMLFormElement | null;
+  const serviceSelect = document.getElementById('service') as HTMLSelectElement | null;
+  const status = document.getElementById('form-status');
+
+  document.querySelectorAll<HTMLElement>('[data-service]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const value = link.dataset.service;
+      if (!value || !serviceSelect) return;
+      const option = Array.from(serviceSelect.options).find((item) => item.value === value);
+      if (option) serviceSelect.value = value;
+    });
+  });
+
   if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
-      const orig = btn.innerText;
-      btn.disabled = true;
-      btn.innerText = 'Wysyłanie...';
-      setTimeout(() => {
-        btn.style.backgroundColor = '#10B981';
-        btn.innerText = 'Wysłano! Oddzwonimy w 15 minut.';
-        form.reset();
-        setTimeout(() => {
-          btn.disabled = false;
-          btn.style.backgroundColor = '';
-          btn.innerText = orig;
-        }, 3000);
-      }, 1500);
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+
+      const data = new FormData(form);
+      const serviceLabel = serviceSelect?.selectedOptions[0]?.textContent || 'Sprawa geodezyjna';
+      const location = String(data.get('location') || '');
+      const parcel = String(data.get('parcel') || 'nie podano');
+      const name = String(data.get('name') || '');
+      const phone = String(data.get('phone') || '');
+      const message = String(data.get('message') || 'brak dodatkowych informacji');
+
+      const subject = `Zapytanie ze strony KT-GEO — ${serviceLabel}`;
+      const body = [
+        `Dzień dobry,`,
+        ``,
+        `proszę o kontakt w sprawie usługi geodezyjnej.`,
+        ``,
+        `Rodzaj sprawy: ${serviceLabel}`,
+        `Lokalizacja: ${location}`,
+        `Numer działki / obręb: ${parcel}`,
+        `Imię: ${name}`,
+        `Telefon: ${phone}`,
+        `Dodatkowa informacja: ${message}`,
+        ``,
+        `Pozdrawiam,`,
+        name
+      ].join('\n');
+
+      if (status) {
+        status.classList.remove('hidden');
+        status.textContent = 'Wiadomość została przygotowana. Jeśli program pocztowy się nie otworzył, skorzystaj z telefonu lub adresu e-mail obok formularza.';
+      }
+
+      window.location.href = `mailto:geodezjakamilnowakowski@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
   }
 </script>

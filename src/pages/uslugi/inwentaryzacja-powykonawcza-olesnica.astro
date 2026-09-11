@@ -1,0 +1,41 @@
+---
+import ServicePage from '../../components/ServicePage.astro';
+
+const forWhom = [
+  'kończysz budowę domu lub innego obiektu i potrzebujesz pomiaru wykonanych elementów',
+  'potrzebujesz dokumentacji geodezyjnej do dalszych formalności po zakończeniu robót',
+  'trzeba pomierzyć wykonane obiekty, sieci lub przyłącza'
+];
+
+const youGet = [
+  'pomiar powykonawczy elementów objętych zakresem zlecenia',
+  'opracowanie geodezyjne przygotowane na podstawie wykonanych pomiarów',
+  'informację, kiedy najlepiej wykonać pomiar względem harmonogramu robót'
+];
+
+const steps = [
+  { title: 'Ustalenie zakresu', description: 'Określamy, jakie elementy inwestycji mają zostać objęte pomiarem powykonawczym.' },
+  { title: 'Pomiar', description: 'Wykonujemy pomiar obiektów i elementów objętych zleceniem.' },
+  { title: 'Dokumentacja', description: 'Przygotowujemy opracowanie geodezyjne potrzebne do dalszego zakończenia procesu inwestycyjnego.' }
+];
+
+const faq = [
+  { question: 'Kiedy najlepiej zamówić inwentaryzację powykonawczą?', answer: 'Termin należy dopasować do etapu robót i dostępności elementów, które mają zostać pomierzone. W przypadku elementów, które później zostaną zakryte, warto skontaktować się wcześniej.' },
+  { question: 'Czy można wykonać część pomiarów wcześniej?', answer: 'Tak, w zależności od rodzaju inwestycji i zakresu prac. Harmonogram najlepiej omówić przed zakończeniem wszystkich robót.' },
+  { question: 'Co podać do wyceny?', answer: 'Lokalizację, rodzaj inwestycji oraz informację, jakie obiekty lub przyłącza mają zostać pomierzone. Numer działki ułatwia przygotowanie wyceny.' }
+];
+---
+
+<ServicePage
+  seoTitle="Inwentaryzacja powykonawcza Oleśnica | KT-GEO"
+  description="Geodezyjna inwentaryzacja powykonawcza w Oleśnicy i okolicach. Pomiar wykonanych obiektów, sieci i przyłączy oraz przygotowanie dokumentacji."
+  eyebrow="Oleśnica i okolice"
+  title="Inwentaryzacja powykonawcza"
+  intro="Wykonujemy pomiary powykonawcze budynków, sieci i przyłączy. Zakres pracy ustalamy na podstawie rodzaju inwestycji i wykonanych elementów."
+  image="/yellow-surveying.webp"
+  imageAlt="Prace geodezyjne podczas pomiaru powykonawczego"
+  forWhom={forWhom}
+  youGet={youGet}
+  steps={steps}
+  faq={faq}
+/>

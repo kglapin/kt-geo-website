@@ -1,0 +1,41 @@
+---
+import ServicePage from '../../components/ServicePage.astro';
+
+const forWhom = [
+  'projektant potrzebuje aktualnej mapy do przygotowania projektu zagospodarowania działki lub terenu',
+  'rozpoczynasz projekt domu, budynku albo innej inwestycji',
+  'potrzebne jest aktualne opracowanie sytuacji terenowej i uzbrojenia dla konkretnej działki'
+];
+
+const youGet = [
+  'pomiar terenowy w zakresie potrzebnym do opracowania mapy',
+  'mapę do celów projektowych przygotowaną dla wskazanej inwestycji',
+  'informację, jakie dane lub materiały trzeba przekazać przed rozpoczęciem pracy'
+];
+
+const steps = [
+  { title: 'Lokalizacja i zakres', description: 'Podajesz miejscowość oraz — jeśli go znasz — numer działki i obręb. Ustalamy przeznaczenie mapy.' },
+  { title: 'Pomiar terenowy', description: 'Wykonujemy potrzebne czynności terenowe i kompletujemy materiały niezbędne do opracowania.' },
+  { title: 'Opracowanie mapy', description: 'Przygotowujemy mapę do wykorzystania przez projektanta w dalszym procesie inwestycyjnym.' }
+];
+
+const faq = [
+  { question: 'Od czego zależy cena mapy do celów projektowych?', answer: 'Od lokalizacji, powierzchni i charakteru terenu, zakresu opracowania oraz materiałów potrzebnych do wykonania pracy. Do wstępnej wyceny najlepiej podać numer działki.' },
+  { question: 'Jak długo trwa wykonanie mapy?', answer: 'Termin zależy od konkretnej działki, zakresu pomiaru i materiałów potrzebnych do opracowania. Po wskazaniu lokalizacji możemy określić realny termin.' },
+  { question: 'Co przygotować przed zleceniem?', answer: 'Najważniejsza jest lokalizacja inwestycji. Jeśli masz numer działki, obręb lub informacje od projektanta, warto je również przesłać.' }
+];
+---
+
+<ServicePage
+  seoTitle="Mapa do celów projektowych Oleśnica | KT-GEO"
+  description="Mapa do celów projektowych w Oleśnicy i okolicach. Pomiar terenu i opracowanie mapy dla projektanta. Zapytaj o zakres, termin i wycenę."
+  eyebrow="Oleśnica i okolice"
+  title="Mapa do celów projektowych"
+  intro="Wykonujemy mapy do celów projektowych dla budowy domów i innych inwestycji. Zakres ustalamy na podstawie lokalizacji oraz przeznaczenia opracowania."
+  image="/topographic-detail.webp"
+  imageAlt="Fragment opracowania geodezyjnego i pomiar terenu"
+  forWhom={forWhom}
+  youGet={youGet}
+  steps={steps}
+  faq={faq}
+/>

@@ -1,0 +1,41 @@
+---
+import ServicePage from '../../components/ServicePage.astro';
+
+const forWhom = [
+  'nie masz pewności, gdzie w terenie przebiega granica nieruchomości',
+  'planujesz ogrodzenie lub inne prace w pobliżu granicy działki',
+  'potrzebujesz ustalić, jaka czynność geodezyjna będzie właściwa w konkretnej sytuacji'
+];
+
+const youGet = [
+  'określenie właściwego zakresu czynności na podstawie dostępnych danych',
+  'prace terenowe i dokumentację odpowiednią dla danej sprawy',
+  'informację, jakie materiały oraz udział stron mogą być wymagane'
+];
+
+const steps = [
+  { title: 'Numer działki i opis sprawy', description: 'Podajesz lokalizację nieruchomości i opisujesz problem lub planowane prace przy granicy.' },
+  { title: 'Sprawdzenie danych', description: 'Weryfikujemy dostępne informacje i ustalamy, jaki rodzaj czynności geodezyjnej jest właściwy.' },
+  { title: 'Prace terenowe', description: 'Wykonujemy ustalony zakres czynności oraz przygotowujemy wymaganą dokumentację.' }
+];
+
+const faq = [
+  { question: 'Czy wznowienie granic i ustalenie granic to to samo?', answer: 'Nie. Właściwy rodzaj czynności zależy od dostępnych danych i stanu konkretnej nieruchomości. Dlatego przed wyceną potrzebny jest numer działki i krótki opis sytuacji.' },
+  { question: 'Czy właściciel sąsiedniej działki musi uczestniczyć?', answer: 'Zależy to od rodzaju wykonywanej czynności. Po ustaleniu właściwego trybu informujemy, czy i w jakim zakresie wymagany jest udział stron.' },
+  { question: 'Co przygotować do pierwszego kontaktu?', answer: 'Numer działki, lokalizację oraz krótki opis sprawy — na przykład planowane ogrodzenie, brak widocznych znaków granicznych albo spór dotyczący przebiegu granicy.' }
+];
+---
+
+<ServicePage
+  seoTitle="Wznowienie i ustalenie granic Oleśnica | KT-GEO"
+  description="Wznowienie i ustalenie granic nieruchomości w Oleśnicy i okolicach. Sprawdzenie danych, prace terenowe i dokumentacja geodezyjna."
+  eyebrow="Oleśnica i okolice"
+  title="Wznowienie i ustalenie granic"
+  intro="Wykonujemy prace związane z przebiegiem granic nieruchomości. Przed rozpoczęciem czynności sprawdzamy dostępne dane i określamy właściwy zakres pracy."
+  image="/aerial-land.webp"
+  imageAlt="Widok działek i granic nieruchomości z góry"
+  forWhom={forWhom}
+  youGet={youGet}
+  steps={steps}
+  faq={faq}
+/>
