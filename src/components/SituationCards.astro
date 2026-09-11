@@ -1,0 +1,66 @@
+---
+const situations = [
+  {
+    eyebrow: 'Start inwestycji',
+    title: 'Buduję dom',
+    description: 'Potrzebujesz mapy do projektu albo wytyczenia budynku w terenie.',
+    service: 'mapa',
+    cta: 'Sprawdź, czego potrzebujesz'
+  },
+  {
+    eyebrow: 'Końcowy etap budowy',
+    title: 'Kończę budowę',
+    description: 'Potrzebujesz inwentaryzacji powykonawczej do dalszych formalności.',
+    service: 'inwentaryzacja',
+    cta: 'Przejdź do wyceny'
+  },
+  {
+    eyebrow: 'Zmiana nieruchomości',
+    title: 'Dzielę działkę',
+    description: 'Chcesz przygotować podział nieruchomości i przejść przez proces bez zgadywania kolejnych kroków.',
+    service: 'podzial',
+    cta: 'Omów podział działki'
+  },
+  {
+    eyebrow: 'Granice nieruchomości',
+    title: 'Mam problem z granicą',
+    description: 'Potrzebujesz wznowienia, ustalenia przebiegu granic albo wyjaśnienia właściwego trybu.',
+    service: 'granice',
+    cta: 'Opisz swoją sytuację'
+  }
+];
+---
+
+<section class="py-16 md:py-20 bg-white border-b border-[#ececec]">
+  <div class="main-grid-container">
+    <div class="max-w-3xl mb-10 md:mb-12" data-animate>
+      <span class="section-kicker">Zacznij od swojej sytuacji</span>
+      <h2 class="section-title mt-4">Nie musisz znać geodezyjnych nazw. Powiedz, na jakim etapie jesteś.</h2>
+      <p class="section-lead mt-4">Dobierzemy właściwy zakres prac i powiemy, co będzie kolejnym krokiem.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {situations.map((item, index) => (
+        <a
+          href="#kontakt"
+          data-service={item.service}
+          class="group relative min-h-[250px] rounded-2xl border border-[#e5e5e5] bg-[#fafafa] p-6 md:p-8 overflow-hidden transition-all duration-300 hover:border-[#c9c9c9] hover:bg-white hover:-translate-y-0.5"
+          data-animate
+        >
+          <div class="absolute top-6 right-6 text-[11px] font-display font-semibold tracking-[0.18em] text-[#b8b8b8]">0{index + 1}</div>
+          <div class="h-full flex flex-col justify-between gap-10">
+            <div>
+              <p class="text-xs font-display font-semibold uppercase tracking-[0.16em] text-brand-red">{item.eyebrow}</p>
+              <h3 class="font-display text-2xl md:text-3xl font-bold text-[#111] mt-3 tracking-tight">{item.title}</h3>
+              <p class="text-[#666] leading-relaxed mt-4 max-w-md">{item.description}</p>
+            </div>
+            <div class="inline-flex items-center gap-2 text-sm font-semibold text-[#111] group-hover:text-brand-red transition-colors">
+              {item.cta}
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" /></svg>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
