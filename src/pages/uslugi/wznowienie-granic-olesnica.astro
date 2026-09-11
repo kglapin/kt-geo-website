@@ -1,0 +1,41 @@
+---
+import ServicePage from '../../components/ServicePage.astro';
+
+const forWhom = [
+  'nie masz pewności, gdzie w terenie przebiega granica nieruchomości',
+  'planujesz ogrodzenie lub inne prace w pobliżu granicy działki',
+  'potrzebujesz ustalić, jaki rodzaj czynności geodezyjnej jest właściwy w Twojej sytuacji'
+];
+
+const youGet = [
+  'wstępne wyjaśnienie, jaki tryb postępowania pasuje do opisanej sytuacji',
+  'czynności terenowe i dokumentację w zakresie wynikającym z konkretnej sprawy',
+  'jasną informację, jakie materiały i udział stron mogą być potrzebne'
+];
+
+const steps = [
+  { title: 'Opisujesz problem', description: 'Podajesz działkę i wyjaśniasz, czego dotyczy wątpliwość związana z granicą.' },
+  { title: 'Dobieramy właściwy tryb', description: 'Weryfikujemy dostępne informacje i ustalamy, jakie czynności geodezyjne są zasadne.' },
+  { title: 'Wykonujemy ustalony zakres', description: 'Realizujemy prace terenowe i przygotowujemy dokumentację odpowiednią dla danej procedury.' }
+];
+
+const faq = [
+  { question: 'Czy wznowienie granic i ustalenie granic to to samo?', answer: 'Nie zawsze. Właściwy rodzaj czynności zależy od dostępnych danych i stanu prawnego konkretnej nieruchomości. Dlatego przed wyceną warto wskazać działkę i opisać problem.' },
+  { question: 'Czy właściciel sąsiedniej działki musi uczestniczyć w czynnościach?', answer: 'Zależy to od rodzaju wykonywanej procedury. Po ustaleniu właściwego trybu wyjaśniamy, czy i w jakim zakresie potrzebny jest udział stron.' },
+  { question: 'Co przygotować do pierwszej rozmowy?', answer: 'Najważniejszy jest numer działki, lokalizacja oraz krótki opis sytuacji — np. planowane ogrodzenie, spór lub brak widocznych znaków granicznych.' }
+];
+---
+
+<ServicePage
+  seoTitle="Wznowienie i ustalenie granic Oleśnica | KT-GEO"
+  description="Sprawy graniczne, wznowienie i ustalenie granic w Oleśnicy i okolicach. Dobieramy właściwy tryb do konkretnej nieruchomości i sytuacji."
+  eyebrow="Sprawy graniczne · Oleśnica"
+  title="Granica działki powinna być jasna, zanim zacznie się problem."
+  intro="Przy sprawach granicznych najważniejsze jest prawidłowe rozpoznanie sytuacji. Najpierw ustalamy, jakie dane są dostępne i jaki rodzaj czynności jest właściwy, a dopiero potem planujemy prace terenowe."
+  image="/aerial-land.webp"
+  imageAlt="Widok działek i granic nieruchomości z góry"
+  forWhom={forWhom}
+  youGet={youGet}
+  steps={steps}
+  faq={faq}
+/>
