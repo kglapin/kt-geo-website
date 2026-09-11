@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import MobileCta from './MobileCta.astro';
+
+interface FaqItem { question: string; answer: string; }
+interface Props {
+  seoTitle: string;
+  description: string;
+  eyebrow: string;
+  title: string;
+  intro: string;
+  image: string;
+  imageAlt: string;
+  forWhom: string[];
+  youGet: string[];
+  steps: { title: string; description: string }[];
+  faq: FaqItem[];
+}
+
+const { seoTitle, description, eyebrow, title, intro, image, imageAlt, forWhom, youGet, steps, faq } = Astro.props;
+---
+
+<Layout title={seoTitle} description={description}>
+  <Header />
+  <main>
+    <section class="relative bg-brand-black text-white overflow-hidden">
+      <div class="absolute inset-0 geo-grid opacity-25"></div>
+      <div class="main-grid-container relative z-10 py-16 md:py-24 lg:py-28">
+        <a href="/#uslugi" class="inline-flex items-center gap-2 text-sm text-white/45 hover:text-white transition-colors mb-8">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" /></svg>
+          Wszystkie usługi
+        </a>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          <div class="lg:col-span-7">
+            <span class="section-kicker">{eyebrow}</span>
+            <h1 class="font-display font-bold text-4xl sm:text-5xl md:text-6xl tracking-[-0.04em] leading-[1.02] mt-4">{title}</h1>
+            <p class="text-lg text-white/55 leading-relaxed mt-6 max-w-2xl">{intro}</p>
+            <div class="flex flex-col sm:flex-row gap-3 mt-8">
+              <a href="/#kontakt" class="inline-flex items-center justify-center gap-2 bg-brand-red text-white font-display font-semibold px-7 py-4 rounded-lg hover:bg-brand-red-dark transition-colors">Wyceń tę usługę</a>
+              <a href="tel:791122618" class="inline-flex items-center justify-center gap-2 border border-white/15 text-white/75 font-display font-semibold px-7 py-4 rounded-lg hover:border-white/30 hover:text-white transition-colors">791 122 618</a>
+            </div>
+          </div>
+          <div class="lg:col-span-5">
+            <div class="relative aspect-[4/3] lg:aspect-[4/5] rounded-2xl overflow-hidden border border-white/10">
+              <img src={image} alt={imageAlt} class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-18 md:py-24 bg-white">
+      <div class="main-grid-container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        <article class="rounded-2xl border border-[#e5e5e5] p-7 md:p-9">
+          <span class="section-kicker">Kiedy jej potrzebujesz</span>
+          <h2 class="font-display font-bold text-3xl tracking-tight mt-3">Ta usługa jest dla Ciebie, jeśli:</h2>
+          <ul class="mt-7 space-y-4">
+            {forWhom.map((item) => (
+              <li class="flex items-start gap-3 text-[#555] leading-relaxed">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-red mt-2.5 shrink-0"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </article>
+        <article class="rounded-2xl bg-[#f5f5f5] p-7 md:p-9">
+          <span class="section-kicker">Co otrzymujesz</span>
+          <h2 class="font-display font-bold text-3xl tracking-tight mt-3">Efekt pracy ma być użyteczny dalej.</h2>
+          <ul class="mt-7 space-y-4">
+            {youGet.map((item) => (
+              <li class="flex items-start gap-3 text-[#555] leading-relaxed">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-brand-red mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="py-20 md:py-24 bg-[#f5f5f5]">
+      <div class="main-grid-container">
+        <span class="section-kicker">Jak wygląda realizacja</span>
+        <h2 class="section-title mt-4">Prosty proces bez zgadywania kolejnych kroków.</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
+          {steps.map((step, index) => (
+            <article class="rounded-2xl bg-white border border-[#e4e4e4] p-7 min-h-[230px] flex flex-col justify-between gap-8">
+              <span class="text-xs font-display font-bold text-brand-red tracking-[0.18em]">0{index + 1}</span>
+              <div>
+                <h3 class="font-display font-bold text-xl">{step.title}</h3>
+                <p class="text-sm text-[#666] leading-relaxed mt-3">{step.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 md:py-24 bg-white">
+      <div class="main-grid-container grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+        <div class="lg:col-span-4">
+          <span class="section-kicker">FAQ</span>
+          <h2 class="section-title mt-4">Najczęstsze pytania.</h2>
+        </div>
+        <div class="lg:col-span-8 border-t border-[#dedede]">
+          {faq.map((item) => (
+            <details class="group border-b border-[#dedede]">
+              <summary class="list-none cursor-pointer py-6 flex items-start justify-between gap-6">
+                <span class="font-display font-semibold text-lg text-[#111]">{item.question}</span>
+                <span class="text-brand-red text-xl leading-none">+</span>
+              </summary>
+              <p class="pb-6 pr-8 text-[#666] leading-relaxed">{item.answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-brand-black text-white">
+      <div class="main-grid-container flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+        <div>
+          <span class="section-kicker">Następny krok</span>
+          <h2 class="font-display font-bold text-3xl md:text-5xl tracking-tight mt-3 max-w-3xl">Podaj lokalizację. Powiemy, jak podejść do Twojej sprawy.</h2>
+        </div>
+        <a href="/#kontakt" class="inline-flex items-center justify-center bg-brand-red text-white font-display font-semibold px-7 py-4 rounded-lg hover:bg-brand-red-dark transition-colors shrink-0">Przejdź do wyceny</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <MobileCta />
+</Layout>
