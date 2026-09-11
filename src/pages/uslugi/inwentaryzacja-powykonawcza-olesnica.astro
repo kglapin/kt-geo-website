@@ -1,0 +1,41 @@
+---
+import ServicePage from '../../components/ServicePage.astro';
+
+const forWhom = [
+  'kończysz budowę domu lub innego obiektu i potrzebujesz pomiaru wykonanych elementów',
+  'przygotowujesz dokumentację do zakończenia odpowiedniego etapu inwestycji',
+  'potrzebujesz aktualnych danych o położeniu wykonanych obiektów i przyłączy'
+];
+
+const youGet = [
+  'pomiar powykonawczy elementów objętych zakresem zlecenia',
+  'opracowanie geodezyjne przygotowane do dalszej procedury związanej z inwestycją',
+  'informację, kiedy najlepiej umówić pomiar względem harmonogramu robót'
+];
+
+const steps = [
+  { title: 'Ustalamy, co mierzymy', description: 'Na podstawie rodzaju inwestycji i wykonanych prac określamy zakres pomiaru.' },
+  { title: 'Wykonujemy pomiar', description: 'Mierzymy obiekty i elementy objęte zleceniem w terenie.' },
+  { title: 'Przygotowujemy opracowanie', description: 'Otrzymujesz dokumentację potrzebną do dalszego zakończenia procesu inwestycyjnego.' }
+];
+
+const faq = [
+  { question: 'Kiedy najlepiej zamówić inwentaryzację powykonawczą?', answer: 'Najlepiej ustalić termin tak, aby geodeta miał dostęp do elementów, które mają zostać pomierzone. Przy niektórych pracach warto skontaktować się jeszcze przed ich zakryciem.' },
+  { question: 'Czy można wykonać pomiar części inwestycji wcześniej?', answer: 'Zakres i kolejność pomiarów zależą od rodzaju inwestycji. Warto omówić harmonogram przed zakończeniem wszystkich prac, aby nie utrudnić późniejszego pomiaru.' },
+  { question: 'Co przygotować do wyceny?', answer: 'Najważniejsza jest lokalizacja, rodzaj inwestycji i informacja, jakie obiekty zostały wykonane. Numer działki dodatkowo ułatwia wstępną ocenę zakresu.' }
+];
+---
+
+<ServicePage
+  seoTitle="Inwentaryzacja powykonawcza Oleśnica | KT-GEO"
+  description="Geodezyjna inwentaryzacja powykonawcza w Oleśnicy i okolicach. Pomiar wykonanych obiektów i dokumentacja do dalszego etapu inwestycji."
+  eyebrow="Inwentaryzacja powykonawcza · Oleśnica"
+  title="Kończysz budowę? Zmierzmy to, co faktycznie powstało."
+  intro="Wykonujemy geodezyjne pomiary powykonawcze i przygotowujemy dokumentację dla inwestycji w Oleśnicy i okolicach. Zakres ustalamy pod konkretny obiekt i etap prac."
+  image="/yellow-surveying.webp"
+  imageAlt="Prace geodezyjne podczas pomiaru powykonawczego"
+  forWhom={forWhom}
+  youGet={youGet}
+  steps={steps}
+  faq={faq}
+/>
