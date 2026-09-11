@@ -27,15 +27,15 @@ const { seoTitle, description, eyebrow, title, intro, image, imageAlt, forWhom, 
   <main>
     <section class="bg-brand-black text-white">
       <div class="main-grid-container py-14 md:py-20 lg:py-24">
-        <a href="/#uslugi" class="inline-flex items-center gap-2 text-sm text-white/45 hover:text-white transition-colors mb-10">← Wszystkie usługi</a>
+        <a href="/#uslugi" class="inline-flex items-center gap-2 text-[0.9375rem] leading-snug text-white/48 hover:text-white transition-colors mb-10">← Wszystkie usługi</a>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           <div class="lg:col-span-6">
-            <p class="text-sm font-display font-medium tracking-[0.15em] uppercase text-brand-red">{eyebrow}</p>
-            <h1 class="font-display font-bold text-4xl sm:text-5xl md:text-6xl tracking-[-0.04em] leading-[1.02] mt-4">{title}</h1>
-            <p class="text-lg text-white/60 leading-relaxed mt-6 max-w-2xl">{intro}</p>
-            <div class="flex flex-col sm:flex-row gap-3 mt-8">
-              <a href="/#kontakt" class="inline-flex items-center justify-center bg-brand-red text-white font-display font-semibold px-7 py-4 hover:bg-brand-red-dark transition-colors">Zapytaj o wycenę</a>
-              <a href="tel:791122618" class="inline-flex items-center justify-center px-6 py-4 text-white/70 font-display font-semibold hover:text-white transition-colors">791 122 618</a>
+            <p class="type-eyebrow">{eyebrow}</p>
+            <h1 class="type-display-xl mt-5 max-w-[12ch]">{title}</h1>
+            <p class="type-lead text-white/62 mt-7 max-w-[55ch]">{intro}</p>
+            <div class="flex flex-col sm:flex-row gap-3 mt-9">
+              <a href="/#kontakt" class="inline-flex items-center justify-center bg-brand-red text-white text-[0.9375rem] leading-none font-semibold tracking-[-0.006em] px-7 py-[1.05rem] hover:bg-brand-red-dark transition-colors">Zapytaj o wycenę</a>
+              <a href="tel:791122618" class="inline-flex items-center justify-center px-6 py-[1.05rem] text-white/72 text-[0.9375rem] leading-none font-semibold tracking-[-0.006em] hover:text-white transition-colors">791 122 618</a>
             </div>
           </div>
           <div class="lg:col-span-6">
@@ -50,18 +50,18 @@ const { seoTitle, description, eyebrow, title, intro, image, imageAlt, forWhom, 
     <section class="py-18 md:py-24 bg-white">
       <div class="main-grid-container grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
         <div class="lg:col-span-6">
-          <p class="text-sm font-display font-medium tracking-[0.15em] uppercase text-brand-red">Kiedy jest potrzebna</p>
+          <p class="type-eyebrow">Kiedy jest potrzebna</p>
           <ul class="mt-7 border-t border-[#d9d9d9]">
             {forWhom.map((item) => (
-              <li class="py-5 border-b border-[#d9d9d9] text-[#555] leading-relaxed">{item}</li>
+              <li class="type-body py-5 border-b border-[#d9d9d9] text-[#555] max-w-none">{item}</li>
             ))}
           </ul>
         </div>
         <div class="lg:col-span-6">
-          <p class="text-sm font-display font-medium tracking-[0.15em] uppercase text-brand-red">Zakres zlecenia</p>
+          <p class="type-eyebrow">Zakres zlecenia</p>
           <ul class="mt-7 border-t border-[#d9d9d9]">
             {youGet.map((item) => (
-              <li class="py-5 border-b border-[#d9d9d9] text-[#555] leading-relaxed flex gap-3"><span class="text-brand-red">—</span><span>{item}</span></li>
+              <li class="type-body py-5 border-b border-[#d9d9d9] text-[#555] max-w-none flex gap-3"><span class="text-brand-red">—</span><span>{item}</span></li>
             ))}
           </ul>
         </div>
@@ -72,16 +72,16 @@ const { seoTitle, description, eyebrow, title, intro, image, imageAlt, forWhom, 
       <div class="main-grid-container">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 mb-12">
           <div class="lg:col-span-5">
-            <p class="text-sm font-display font-medium tracking-[0.15em] uppercase text-brand-red">Realizacja</p>
-            <h2 class="font-display font-bold text-4xl md:text-5xl tracking-[-0.04em] leading-[1.03] mt-4">Jak wygląda praca.</h2>
+            <p class="type-eyebrow">Realizacja</p>
+            <h2 class="type-display-lg mt-5 max-w-[9ch]">Jak wygląda praca.</h2>
           </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 border-t border-[#d0d0cd]">
           {steps.map((step, index) => (
             <article class={`py-8 md:py-10 ${index > 0 ? 'md:pl-8' : ''} ${index < steps.length - 1 ? 'border-b md:border-b-0 md:border-r border-[#d0d0cd] md:pr-8' : ''}`}>
-              <p class="text-xs font-display font-semibold tracking-[0.15em] text-[#999]">0{index + 1}</p>
-              <h3 class="font-display font-bold text-2xl mt-7">{step.title}</h3>
-              <p class="text-[#666] leading-relaxed mt-4">{step.description}</p>
+              <p class="type-meta text-[#999]">0{index + 1}</p>
+              <h3 class="type-display-md mt-7">{step.title}</h3>
+              <p class="type-body text-[#666] mt-4 max-w-[43ch]">{step.description}</p>
             </article>
           ))}
         </div>
@@ -91,17 +91,17 @@ const { seoTitle, description, eyebrow, title, intro, image, imageAlt, forWhom, 
     <section class="py-20 md:py-24 bg-white">
       <div class="main-grid-container grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
         <div class="lg:col-span-4">
-          <p class="text-sm font-display font-medium tracking-[0.15em] uppercase text-brand-red">Pytania</p>
-          <h2 class="font-display font-bold text-4xl tracking-[-0.04em] mt-4">Najczęstsze informacje przed zleceniem.</h2>
+          <p class="type-eyebrow">Pytania</p>
+          <h2 class="type-display-lg mt-5 max-w-[10ch]">Najczęstsze informacje przed zleceniem.</h2>
         </div>
         <div class="lg:col-span-8 border-t border-[#dedede]">
           {faq.map((item) => (
             <details class="group border-b border-[#dedede]">
               <summary class="list-none cursor-pointer py-6 flex items-start justify-between gap-6">
-                <span class="font-display font-semibold text-lg text-[#111]">{item.question}</span>
-                <span class="text-brand-red text-xl leading-none">+</span>
+                <span class="font-display font-semibold text-[1.125rem] md:text-[1.25rem] leading-[1.25] tracking-[-0.018em] text-[#111] max-w-[46ch]">{item.question}</span>
+                <span class="font-mono text-brand-red text-lg leading-none">+</span>
               </summary>
-              <p class="pb-6 pr-8 text-[#666] leading-relaxed">{item.answer}</p>
+              <p class="type-body pb-6 pr-8 text-[#666] max-w-[58ch]">{item.answer}</p>
             </details>
           ))}
         </div>
@@ -111,10 +111,10 @@ const { seoTitle, description, eyebrow, title, intro, image, imageAlt, forWhom, 
     <section class="py-16 md:py-20 bg-brand-black text-white">
       <div class="main-grid-container flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
         <div>
-          <p class="text-sm font-display font-medium tracking-[0.15em] uppercase text-brand-red">Kontakt</p>
-          <h2 class="font-display font-bold text-3xl md:text-5xl tracking-tight mt-3 max-w-3xl">Potrzebujesz tej usługi? Podaj lokalizację i zapytaj o wycenę.</h2>
+          <p class="type-eyebrow">Kontakt</p>
+          <h2 class="type-display-lg text-white mt-4 max-w-[18ch]">Potrzebujesz tej usługi? Podaj lokalizację i zapytaj o wycenę.</h2>
         </div>
-        <a href="/#kontakt" class="inline-flex items-center justify-center bg-brand-red text-white font-display font-semibold px-7 py-4 hover:bg-brand-red-dark transition-colors shrink-0">Kontakt</a>
+        <a href="/#kontakt" class="inline-flex items-center justify-center bg-brand-red text-white text-[0.9375rem] leading-none font-semibold tracking-[-0.006em] px-7 py-[1.05rem] hover:bg-brand-red-dark transition-colors shrink-0">Kontakt</a>
       </div>
     </section>
   </main>
