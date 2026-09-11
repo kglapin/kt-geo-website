@@ -3,35 +3,35 @@ import ServicePage from '../../components/ServicePage.astro';
 
 const forWhom = [
   'chcesz wydzielić z nieruchomości jedną lub kilka nowych działek',
-  'przygotowujesz sprzedaż, darowiznę albo inną zmianę układu nieruchomości',
-  'potrzebujesz najpierw ustalić, czy planowany podział jest możliwy i jaki będzie jego przebieg'
+  'przygotowujesz nieruchomość do sprzedaży, darowizny albo innej zmiany własnościowej',
+  'potrzebujesz ustalić, jaki zakres prac geodezyjnych będzie wymagany przy planowanym podziale'
 ];
 
 const youGet = [
-  'wyjaśnienie kolejnych etapów procesu podziałowego',
-  'prace geodezyjne i dokumentację w zakresie właściwym dla konkretnej sprawy',
-  'jasną informację, jakie dokumenty lub ustalenia są potrzebne po stronie właściciela'
+  'informację o kolejnych etapach geodezyjnej części podziału',
+  'pomiary i dokumentację w zakresie właściwym dla konkretnej nieruchomości',
+  'wskazanie dokumentów i informacji potrzebnych do rozpoczęcia pracy'
 ];
 
 const steps = [
-  { title: 'Opisujesz plan podziału', description: 'Podajesz lokalizację nieruchomości i wyjaśniasz, jaki efekt chcesz osiągnąć.' },
-  { title: 'Ustalamy właściwy tryb', description: 'Analizujemy zakres geodezyjny i informujemy, jakie kolejne czynności będą potrzebne.' },
-  { title: 'Realizujemy prace i dokumentację', description: 'Prowadzimy geodezyjną część procesu zgodnie z ustalonym zakresem.' }
+  { title: 'Działka i plan podziału', description: 'Podajesz numer działki, lokalizację i opisujesz, jaki podział chcesz wykonać.' },
+  { title: 'Ustalenie zakresu', description: 'Sprawdzamy, jakie czynności geodezyjne są potrzebne w danej sprawie i ustalamy dalszy przebieg.' },
+  { title: 'Prace geodezyjne', description: 'Wykonujemy ustalony zakres pomiarów i przygotowujemy dokumentację związaną z podziałem.' }
 ];
 
 const faq = [
-  { question: 'Czy każdy podział działki wygląda tak samo?', answer: 'Nie. Tryb i wymagane czynności zależą od celu podziału, nieruchomości oraz uwarunkowań formalnych. Dlatego warto zacząć od konkretnej działki i planowanego efektu.' },
-  { question: 'Co podać przy pierwszym kontakcie?', answer: 'Najlepiej lokalizację, numer działki i krótki opis, jak chcesz ją podzielić. To pozwala sprawniej ustalić, jakie informacje będą potrzebne dalej.' },
-  { question: 'Czy geodeta prowadzi cały proces administracyjny?', answer: 'Zakres obsługi zależy od konkretnej sprawy. Na początku wyjaśniamy, które elementy leżą po stronie geodety, a które wymagają działań właściciela lub innych uczestników procesu.' }
+  { question: 'Czy każdy podział działki przebiega tak samo?', answer: 'Nie. Zakres i tryb zależą od celu podziału, nieruchomości oraz uwarunkowań formalnych. Dlatego wycenę zaczynamy od konkretnej działki.' },
+  { question: 'Co podać przy pierwszym kontakcie?', answer: 'Najlepiej numer działki, lokalizację oraz krótki opis planowanego podziału.' },
+  { question: 'Czy geodeta prowadzi całą procedurę?', answer: 'Zakres obsługi zależy od konkretnej sprawy. Na początku określamy, które czynności wykonuje geodeta, a które wymagają działań właściciela lub urzędu.' }
 ];
 ---
 
 <ServicePage
-  seoTitle="Podział działki Oleśnica | Geodeta KT-GEO"
-  description="Podział działki i nieruchomości w Oleśnicy i okolicach. Wyjaśniamy kolejne kroki, wykonujemy prace geodezyjne i przygotowujemy dokumentację."
-  eyebrow="Podział działki · Oleśnica"
-  title="Chcesz podzielić działkę? Zacznij od sprawdzenia właściwej drogi."
-  intro="Podział nieruchomości to nie tylko pomiar w terenie. Najpierw trzeba ustalić cel, zakres i właściwy przebieg procedury. Pomagamy przejść przez geodezyjną część procesu krok po kroku."
+  seoTitle="Podział działki Oleśnica | KT-GEO"
+  description="Podziały działek i nieruchomości w Oleśnicy i okolicach. Prace geodezyjne, pomiary i dokumentacja związana z podziałem nieruchomości."
+  eyebrow="Oleśnica i okolice"
+  title="Podział działki"
+  intro="Wykonujemy prace geodezyjne związane z podziałami nieruchomości. Zakres zależy od konkretnej działki, celu podziału i wymaganej procedury."
   image="/green-field-aerial.webp"
   imageAlt="Działki i teren objęty pracami geodezyjnymi"
   forWhom={forWhom}
