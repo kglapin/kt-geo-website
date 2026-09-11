@@ -7,7 +7,7 @@ const services = [
     outcome: 'Dla architekta i dalszych formalności projektowych.',
     image: '/topographic-detail.webp',
     span: 'sm:col-span-2',
-    service: 'mapa'
+    href: '/uslugi/mapa-do-celow-projektowych-olesnica/'
   },
   {
     tag: 'Przed rozpoczęciem robót',
@@ -16,7 +16,7 @@ const services = [
     outcome: 'Żeby wykonawca wiedział dokładnie, gdzie zaczynać.',
     image: '/construction-aerial.webp',
     span: '',
-    service: 'tyczenie'
+    href: '/uslugi/tyczenie-budynku-olesnica/'
   },
   {
     tag: 'Po zakończeniu robót',
@@ -25,7 +25,7 @@ const services = [
     outcome: 'Do dalszej procedury odbiorowej budynku.',
     image: '/yellow-surveying.webp',
     span: '',
-    service: 'inwentaryzacja'
+    href: '/uslugi/inwentaryzacja-powykonawcza-olesnica/'
   },
   {
     tag: 'Działki i granice',
@@ -34,7 +34,7 @@ const services = [
     outcome: 'Jasny zakres i wyjaśnione kolejne kroki.',
     image: '/green-field-aerial.webp',
     span: 'sm:col-span-2',
-    service: 'granice'
+    href: '/uslugi/podzial-dzialki-olesnica/'
   }
 ];
 ---
@@ -51,8 +51,7 @@ const services = [
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {services.map((service) => (
         <a
-          href="#kontakt"
-          data-service={service.service}
+          href={service.href}
           class={`group relative overflow-hidden rounded-2xl ${service.span} min-h-[330px] sm:min-h-[390px] flex items-end border border-black/5`}
           data-animate
         >
@@ -73,6 +72,7 @@ const services = [
                   <span class="w-1.5 h-1.5 rounded-full bg-brand-red"></span>
                   {service.outcome}
                 </p>
+                <p class="text-xs uppercase tracking-[0.14em] text-white/45 font-display font-semibold mt-5 group-hover:text-white transition-colors">Zobacz szczegóły usługi →</p>
               </div>
               <span class="hidden md:flex w-10 h-10 rounded-full border border-white/20 items-center justify-center text-white/70 shrink-0 group-hover:border-brand-red group-hover:text-brand-red transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" /></svg>
@@ -81,6 +81,14 @@ const services = [
           </div>
         </a>
       ))}
+    </div>
+
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-6 rounded-xl border border-[#dfdfdf] bg-white p-5 md:p-6">
+      <div>
+        <p class="font-display font-semibold text-[#111]">Nie widzisz swojej sprawy?</p>
+        <p class="text-sm text-[#666] mt-1">Opisz ją własnymi słowami — ustalimy, jakiego zakresu geodezyjnego potrzebujesz.</p>
+      </div>
+      <a href="#kontakt" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-red hover:text-brand-red-dark shrink-0">Opisz sprawę →</a>
     </div>
   </div>
 </section>
