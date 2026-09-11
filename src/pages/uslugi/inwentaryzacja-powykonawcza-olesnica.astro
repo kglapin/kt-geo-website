@@ -3,35 +3,35 @@ import ServicePage from '../../components/ServicePage.astro';
 
 const forWhom = [
   'kończysz budowę domu lub innego obiektu i potrzebujesz pomiaru wykonanych elementów',
-  'przygotowujesz dokumentację do zakończenia odpowiedniego etapu inwestycji',
-  'potrzebujesz aktualnych danych o położeniu wykonanych obiektów i przyłączy'
+  'potrzebujesz dokumentacji geodezyjnej do dalszych formalności po zakończeniu robót',
+  'trzeba pomierzyć wykonane obiekty, sieci lub przyłącza'
 ];
 
 const youGet = [
   'pomiar powykonawczy elementów objętych zakresem zlecenia',
-  'opracowanie geodezyjne przygotowane do dalszej procedury związanej z inwestycją',
-  'informację, kiedy najlepiej umówić pomiar względem harmonogramu robót'
+  'opracowanie geodezyjne przygotowane na podstawie wykonanych pomiarów',
+  'informację, kiedy najlepiej wykonać pomiar względem harmonogramu robót'
 ];
 
 const steps = [
-  { title: 'Ustalamy, co mierzymy', description: 'Na podstawie rodzaju inwestycji i wykonanych prac określamy zakres pomiaru.' },
-  { title: 'Wykonujemy pomiar', description: 'Mierzymy obiekty i elementy objęte zleceniem w terenie.' },
-  { title: 'Przygotowujemy opracowanie', description: 'Otrzymujesz dokumentację potrzebną do dalszego zakończenia procesu inwestycyjnego.' }
+  { title: 'Ustalenie zakresu', description: 'Określamy, jakie elementy inwestycji mają zostać objęte pomiarem powykonawczym.' },
+  { title: 'Pomiar', description: 'Wykonujemy pomiar obiektów i elementów objętych zleceniem.' },
+  { title: 'Dokumentacja', description: 'Przygotowujemy opracowanie geodezyjne potrzebne do dalszego zakończenia procesu inwestycyjnego.' }
 ];
 
 const faq = [
-  { question: 'Kiedy najlepiej zamówić inwentaryzację powykonawczą?', answer: 'Najlepiej ustalić termin tak, aby geodeta miał dostęp do elementów, które mają zostać pomierzone. Przy niektórych pracach warto skontaktować się jeszcze przed ich zakryciem.' },
-  { question: 'Czy można wykonać pomiar części inwestycji wcześniej?', answer: 'Zakres i kolejność pomiarów zależą od rodzaju inwestycji. Warto omówić harmonogram przed zakończeniem wszystkich prac, aby nie utrudnić późniejszego pomiaru.' },
-  { question: 'Co przygotować do wyceny?', answer: 'Najważniejsza jest lokalizacja, rodzaj inwestycji i informacja, jakie obiekty zostały wykonane. Numer działki dodatkowo ułatwia wstępną ocenę zakresu.' }
+  { question: 'Kiedy najlepiej zamówić inwentaryzację powykonawczą?', answer: 'Termin należy dopasować do etapu robót i dostępności elementów, które mają zostać pomierzone. W przypadku elementów, które później zostaną zakryte, warto skontaktować się wcześniej.' },
+  { question: 'Czy można wykonać część pomiarów wcześniej?', answer: 'Tak, w zależności od rodzaju inwestycji i zakresu prac. Harmonogram najlepiej omówić przed zakończeniem wszystkich robót.' },
+  { question: 'Co podać do wyceny?', answer: 'Lokalizację, rodzaj inwestycji oraz informację, jakie obiekty lub przyłącza mają zostać pomierzone. Numer działki ułatwia przygotowanie wyceny.' }
 ];
 ---
 
 <ServicePage
   seoTitle="Inwentaryzacja powykonawcza Oleśnica | KT-GEO"
-  description="Geodezyjna inwentaryzacja powykonawcza w Oleśnicy i okolicach. Pomiar wykonanych obiektów i dokumentacja do dalszego etapu inwestycji."
-  eyebrow="Inwentaryzacja powykonawcza · Oleśnica"
-  title="Kończysz budowę? Zmierzmy to, co faktycznie powstało."
-  intro="Wykonujemy geodezyjne pomiary powykonawcze i przygotowujemy dokumentację dla inwestycji w Oleśnicy i okolicach. Zakres ustalamy pod konkretny obiekt i etap prac."
+  description="Geodezyjna inwentaryzacja powykonawcza w Oleśnicy i okolicach. Pomiar wykonanych obiektów, sieci i przyłączy oraz przygotowanie dokumentacji."
+  eyebrow="Oleśnica i okolice"
+  title="Inwentaryzacja powykonawcza"
+  intro="Wykonujemy pomiary powykonawcze budynków, sieci i przyłączy. Zakres pracy ustalamy na podstawie rodzaju inwestycji i wykonanych elementów."
   image="/yellow-surveying.webp"
   imageAlt="Prace geodezyjne podczas pomiaru powykonawczego"
   forWhom={forWhom}
