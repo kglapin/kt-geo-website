@@ -63,7 +63,9 @@ const structuredData = {
       import { ScrollTrigger } from 'gsap/ScrollTrigger';
       gsap.registerPlugin(ScrollTrigger);
 
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const header = document.querySelector('header');
+
       if (header) {
         ScrollTrigger.create({
           start: 'top -50',
@@ -72,36 +74,25 @@ const structuredData = {
         });
       }
 
-      const heroBgImg = document.getElementById('hero-bg-img');
-      if (heroBgImg && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        gsap.to(heroBgImg, {
-          scale: 1.06,
-          duration: 16,
-          ease: 'sine.inOut',
-          yoyo: true,
-          repeat: -1
-        });
-      }
+      if (!reducedMotion) {
+        const heroH1 = document.querySelector('[data-hero-h1]');
+        const heroP = document.querySelector('[data-hero-p]');
+        const heroCta = document.querySelector('[data-hero-cta]');
 
-      const heroH1 = document.querySelector('[data-hero-h1]');
-      const heroP = document.querySelector('[data-hero-p]');
-      const heroCta = document.querySelector('[data-hero-cta]');
+        if (heroH1) {
+          const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
+          tl.from(heroH1, { y: 18, opacity: 0, duration: 0.65 })
+            .from(heroP, { y: 12, opacity: 0, duration: 0.5 }, '-=0.3')
+            .from(heroCta, { opacity: 0, duration: 0.4 }, '-=0.2');
+        }
 
-      if (heroH1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-        tl.from(heroH1, { y: 32, opacity: 0, duration: 0.9 })
-          .from(heroP, { y: 22, opacity: 0, duration: 0.7 }, '-=0.45')
-          .from(heroCta, { y: 16, opacity: 0, duration: 0.55 }, '-=0.3');
-      }
-
-      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        document.querySelectorAll('[data-animate]').forEach(function(el) {
+        document.querySelectorAll('[data-animate]').forEach((el) => {
           gsap.from(el, {
-            y: 28,
+            y: 14,
             opacity: 0,
-            duration: 0.7,
-            ease: 'power3.out',
-            scrollTrigger: { trigger: el, start: 'top 88%' }
+            duration: 0.55,
+            ease: 'power2.out',
+            scrollTrigger: { trigger: el, start: 'top 92%', once: true }
           });
         });
       }
