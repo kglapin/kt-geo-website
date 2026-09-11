@@ -19,18 +19,18 @@ const reviews = [
   <div class="main-grid-container">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
       <div class="lg:col-span-4" data-animate>
-        <p class="text-sm font-display font-medium tracking-[0.15em] uppercase text-brand-red">Opinie klientów</p>
-        <h2 class="font-display font-bold text-4xl md:text-5xl tracking-[-0.04em] leading-[1.03] mt-4">Po wykonanej pracy.</h2>
+        <p class="type-eyebrow">Opinie klientów</p>
+        <h2 class="type-display-lg text-white mt-5 max-w-[8ch]">Po wykonanej pracy.</h2>
       </div>
 
       <div class="lg:col-span-8 border-t border-white/15" data-animate>
         {reviews.map((review, index) => (
           <article class="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-8 py-8 md:py-10 border-b border-white/15">
-            <div class="md:col-span-1 text-xs text-white/30 font-display">0{index + 1}</div>
-            <blockquote class="md:col-span-8 text-lg md:text-xl leading-relaxed text-white/75">„{review.text}”</blockquote>
+            <div class="md:col-span-1 type-meta text-white/30">0{index + 1}</div>
+            <blockquote class="md:col-span-8 text-[1.125rem] md:text-[1.25rem] leading-[1.5] tracking-[-0.01em] text-white/78 max-w-[50ch]">„{review.text}”</blockquote>
             <div class="md:col-span-3 md:text-right">
-              <p class="font-display font-semibold text-white">{review.name}</p>
-              <p class="text-xs text-white/30 mt-1">opinia Google</p>
+              <p class="text-[0.9375rem] leading-snug font-semibold text-white">{review.name}</p>
+              <p class="type-meta text-white/28 mt-2">opinia Google</p>
             </div>
           </article>
         ))}
